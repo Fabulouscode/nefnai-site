@@ -18,7 +18,7 @@ export const site = {
 
 export const nav = [
   { href: '/who-we-are', label: 'Who we are' },
-  { href: '/programmes', label: 'Programmes' },
+  { href: '/news-events', label: 'News & Events' },
   { href: '/training', label: 'Training' },
   { href: '/local-government-autonomy', label: 'LG Autonomy' },
   { href: '/get-help', label: 'Get help' },

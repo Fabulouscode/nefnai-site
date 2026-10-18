@@ -19,16 +19,16 @@ export function SiteHeader() {
           <Image src="/logo.jpg" alt="" width={44} height={44} className="h-11 w-11 rounded-full" priority />
           <span className="leading-tight">
             <span className="block font-display text-lg font-extrabold tracking-tight text-ink">NEFNAI</span>
-            <span className="hidden text-[11px] font-semibold text-muted sm:block">New Followership, New Africa Initiative</span>
+            <span className="hidden text-[11px] font-semibold text-muted sm:block lg:hidden 2xl:block">New Followership, New Africa Initiative</span>
           </span>
         </Link>
 
-        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-5 lg:flex xl:gap-7">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`text-[15px] font-semibold transition-colors hover:text-green-deep ${pathname === item.href ? 'text-green-deep' : 'text-ink/80'}`}
+              className={`whitespace-nowrap text-[15px] font-semibold transition-colors hover:text-green-deep ${pathname === item.href ? 'text-green-deep' : 'text-ink/80'}`}
             >
               {item.label}
             </Link>
@@ -36,7 +36,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/volunteer" className="hidden rounded-full px-4 py-2.5 text-[15px] font-bold text-green-deep ring-1 ring-inset ring-green/30 hover:bg-green-soft sm:inline-flex">
+          <Link href="/account/login" className="hidden whitespace-nowrap px-2 text-[15px] font-semibold text-ink/80 hover:text-green-deep xl:inline-flex">
+            Sign in
+          </Link>
+          <Link href="/volunteer" className="hidden whitespace-nowrap rounded-full px-4 py-2.5 text-[15px] font-bold text-green-deep ring-1 ring-inset ring-green/30 hover:bg-green-soft sm:inline-flex">
             Volunteer
           </Link>
           <Link href="/donate" className="hidden rounded-full bg-sun px-5 py-2.5 text-[15px] font-bold text-forest hover:bg-[#ffc21f] sm:inline-flex">
@@ -68,6 +71,9 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
+          <Link href="/account/login" className="mt-2 block py-3 text-lg font-semibold text-sky-deep">
+            Sign in or become a member
+          </Link>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <Link href="/volunteer" className="rounded-full py-3.5 text-center font-bold text-green-deep ring-1 ring-inset ring-green/30">
               Volunteer

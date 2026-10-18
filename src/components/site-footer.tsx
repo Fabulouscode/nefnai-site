@@ -22,7 +22,7 @@ export function SiteFooter() {
         <div>
           <p className="font-display font-bold text-white">Explore</p>
           <ul className="mt-4 space-y-2.5">
-            {[...nav, { href: '/volunteer', label: 'Volunteer' }, { href: '/donate', label: 'Donate' }].map((item) => (
+            {[...nav, { href: '/volunteer', label: 'Volunteer' }, { href: '/donate', label: 'Donate' }, { href: '/account/login', label: 'Member sign in' }].map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="hover:text-white">{item.label}</Link>
               </li>

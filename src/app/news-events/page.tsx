@@ -6,9 +6,39 @@ import { Button, SectionTitle, container } from '@/components/ui';
 import { photos } from '@/lib/photos';
 
 export const metadata: Metadata = {
-  title: 'Programmes',
-  description: 'NEFNAI’s programmes and initiatives: anti-corruption campaigns, business summits, out-of-school enrolment, welfare, health insurance and more.',
+  title: 'News & events',
+  description: 'NEFNAI news, events and programmes: the local government autonomy campaign, the welfare scheme, anti-corruption campaigns, out-of-school enrolment and more.',
 };
+
+const NEWS = [
+  {
+    date: '2026',
+    tag: 'Campaign',
+    title: 'Let local government autonomy work for Nigerians',
+    text: 'Our campaign for full implementation of the Supreme Court judgment on local government autonomy, with a petition, a survey and the 10 for 10 challenge.',
+    photo: photos.tenForTen,
+    href: '/local-government-autonomy',
+    cta: 'Join the campaign',
+  },
+  {
+    date: 'Nov 2024 – Apr 2025',
+    tag: 'Welfare',
+    title: 'Welfare scheme benefits presented to families',
+    text: 'NEFNAI Special Welfare Scheme benefits were presented to the families of members who lost registered relatives, including in Ushongo LGA.',
+    photo: photos.welfare2,
+    href: '#welfare',
+    cta: 'See the welfare scheme',
+  },
+  {
+    date: '2024',
+    tag: 'Event',
+    title: '2024 Annual General Conference, Makurdi',
+    text: 'Members, partners and guests gathered in Makurdi for our Annual General Conference to review the year and plan ahead.',
+    photo: photos.conference,
+    href: '/who-we-are',
+    cta: 'About NEFNAI',
+  },
+];
 
 const PROGRAMMES: { years: string; title: string; summary: string; goals: string[] }[] = [
   {
@@ -77,17 +107,50 @@ const PROGRAMMES: { years: string; title: string; summary: string; goals: string
   },
 ];
 
-export default function ProgrammesPage() {
+export default function NewsEventsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Programmes & initiatives"
-        title={<>Programmes that are <span className="text-green-deep">making a difference.</span></>}
-        intro="From anti-corruption campaigns to getting children back into school, most of our programmes have run every year since NEFNAI began."
+        eyebrow="News & events"
+        title={<>What we’re doing, <span className="text-green-deep">and where.</span></>}
+        intro="The latest from NEFNAI, and the programmes that have run in our communities since 2018."
       />
 
       <section className="py-20 sm:py-28">
-        <div className={`${container} grid gap-6 md:grid-cols-2`}>
+        <div className={container}>
+          <SectionTitle eyebrow="Latest" title="News & updates" />
+          <ul className="mt-12 grid gap-6 lg:grid-cols-3">
+            {NEWS.map((item) => (
+              <li key={item.title} className="flex flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-line">
+                <div className="relative aspect-[16/10] bg-mint">
+                  <Image src={item.photo.src} alt={item.photo.alt} fill sizes="(min-width: 1024px) 360px, 100vw" className="object-cover" />
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <p className="flex items-center gap-3 text-sm font-semibold">
+                    <span className="rounded-full bg-green-soft px-2.5 py-0.5 text-green-deep">{item.tag}</span>
+                    <span className="text-muted">{item.date}</span>
+                  </p>
+                  <h3 className="mt-4 text-xl leading-snug">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{item.text}</p>
+                  <a href={item.href} className="mt-6 inline-flex items-center gap-2 font-bold text-green-deep">
+                    {item.cta} <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-mint py-20 sm:py-28">
+        <div className={container}>
+          <SectionTitle
+            eyebrow="Programmes & initiatives"
+            title={<>Programmes that are <span className="text-green-deep">making a difference.</span></>}
+            intro="From anti-corruption campaigns to getting children back into school, most of our programmes have run every year since NEFNAI began."
+          />
+        </div>
+        <div className={`${container} mt-12 grid gap-6 md:grid-cols-2`}>
           {PROGRAMMES.map((item) => (
             <article key={item.title} className="flex flex-col rounded-3xl bg-white p-7 ring-1 ring-line sm:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.12em] text-sky-deep">{item.years}</p>
@@ -108,7 +171,7 @@ export default function ProgrammesPage() {
         </div>
       </section>
 
-      <section className="bg-mint py-20 sm:py-28">
+      <section id="welfare" className="py-20 sm:py-28">
         <div className={container}>
           <SectionTitle
             eyebrow="NEFNAI special welfare scheme"

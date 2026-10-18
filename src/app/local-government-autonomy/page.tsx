@@ -130,7 +130,7 @@ export default function LocalGovernmentAutonomyPage() {
       <section className="py-20 sm:py-28">
         <div className={`${container} grid items-center gap-12 lg:grid-cols-2`}>
           <div className="overflow-hidden rounded-3xl ring-1 ring-line">
-            <Image src="/photos/engagement-hall.webp" alt="Stakeholders at a NEFNAI engagement on local government autonomy" width={2040} height={1530} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
+            <Image src="/photos/engagement-hall.webp" alt="Participants at a NEFNAI stakeholder engagement" width={2040} height={1530} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
           </div>
           <div>
             <Eyebrow>In the field</Eyebrow>
