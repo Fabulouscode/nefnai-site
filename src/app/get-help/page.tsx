@@ -14,13 +14,13 @@ export default function GetHelpPage() {
     <>
       <PageHero
         eyebrow="Get help"
-        title={<>We’re here to <span className="text-green-deep">help.</span></>}
+        title={<>We’re here to <span className="hl">help.</span></>}
         intro="For urgent help or advice, legal or otherwise, call our hotlines or send us an email."
       />
 
       <section className="py-20 sm:py-24">
         <div className={`${container} grid gap-5 lg:grid-cols-3`}>
-          <div className="rounded-3xl bg-forest p-8 text-white lg:col-span-1">
+          <div className="rounded-md bg-forest p-8 text-white lg:col-span-1">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-sky">Legal advice & urgent help</p>
             <ul className="mt-6 space-y-3">
               {site.phones.map((phone) => (
@@ -33,7 +33,7 @@ export default function GetHelpPage() {
               </li>
             </ul>
           </div>
-          <div className="rounded-3xl bg-white p-8 ring-1 ring-line lg:col-span-2">
+          <div className="rounded-md bg-white p-8 ring-1 ring-line lg:col-span-2">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-green-deep">Career opportunities</p>
             <p className="mt-4 text-lg leading-relaxed">
               NEFNAI offers short, medium and long-term opportunities in areas from character development to education, health and

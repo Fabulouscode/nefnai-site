@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button, Eyebrow, SectionTitle, container } from '@/components/ui';
 import { site } from '@/lib/site';
 import { photos } from '@/lib/photos';
+import { SunRays } from '@/components/sun-rays';
 
 export const metadata: Metadata = {
   title: 'Local government autonomy',
@@ -29,7 +30,7 @@ export default function LocalGovernmentAutonomyPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-forest text-white">
-        <div aria-hidden="true" className="absolute -right-32 -top-32 h-[520px] w-[520px] rounded-full bg-sky/15 blur-3xl" />
+        <SunRays className="absolute -bottom-2 right-[-12%] h-[110%] w-auto opacity-60" />
         <div className={`${container} relative py-20 sm:py-28`}>
           <Eyebrow light>Campaign · Local government autonomy</Eyebrow>
           <h1 className="mt-5 max-w-4xl text-[2.5rem] text-white sm:text-6xl">
@@ -44,11 +45,12 @@ export default function LocalGovernmentAutonomyPage() {
           </div>
           <p className="mt-6 text-white/60">Your voice can help strengthen grassroots democracy in Nigeria.</p>
         </div>
+        <div className="tricolor" />
       </section>
 
       <section className="py-20 sm:py-28">
         <div className={`${container} grid gap-12 lg:grid-cols-2 lg:gap-20`}>
-          <SectionTitle eyebrow="The Supreme Court judgment" title={<>A historic decision. <span className="text-sky-deep">A pending implementation.</span></>} />
+          <SectionTitle eyebrow="The Supreme Court judgment" title={<>A historic decision. <span className="hl">A pending implementation.</span></>} />
           <div className="space-y-5 text-lg leading-relaxed">
             <p>
               On <strong className="text-ink">11 July 2024</strong>, Nigeria’s Supreme Court delivered a historic judgment affirming the financial and
@@ -65,7 +67,7 @@ export default function LocalGovernmentAutonomyPage() {
           <SectionTitle center eyebrow="Why this matters" title="What autonomy changes" />
           <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {WHY.map(([name, text]) => (
-              <li key={name} className="rounded-3xl bg-white p-6 ring-1 ring-line">
+              <li key={name} className="rounded-md bg-white p-6 ring-1 ring-line">
                 <span aria-hidden="true" className="block h-1.5 w-10 rounded-full bg-green" />
                 <h3 className="mt-5 text-lg">{name}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">{text}</p>
@@ -95,12 +97,12 @@ export default function LocalGovernmentAutonomyPage() {
         <div className={container}>
           <SectionTitle center eyebrow="The 10 for 10 challenge" title="How one voice becomes a movement" />
           <div className="mt-14 grid gap-5 lg:grid-cols-[1fr_1.4fr]">
-          <div className="self-start overflow-hidden rounded-3xl ring-1 ring-line">
+          <div className="self-start overflow-hidden rounded-md ring-1 ring-line">
             <Image src={photos.tenForTen.src} alt={photos.tenForTen.alt} width={photos.tenForTen.width} height={photos.tenForTen.height} sizes="(min-width: 1024px) 440px, 100vw" className="h-auto w-full" />
           </div>
           <ol className="grid gap-5 sm:grid-cols-2">
             {STEPS.map(([name, text], i) => (
-              <li key={name} className="rounded-3xl bg-white p-7 ring-1 ring-line">
+              <li key={name} className="rounded-md bg-white p-7 ring-1 ring-line">
                 <span className="font-display text-4xl font-extrabold text-sky">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="mt-3 text-xl">{name}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">{text}</p>
@@ -109,14 +111,14 @@ export default function LocalGovernmentAutonomyPage() {
           </ol>
           </div>
           <div className="mt-6 grid gap-5 lg:grid-cols-2">
-            <div className="rounded-3xl bg-forest p-8 text-white">
+            <div className="rounded-md bg-forest p-8 text-white">
               <h3 className="text-2xl text-white">Get recognised</h3>
               <p className="mt-3 leading-relaxed text-white/75">
                 When your first 10-for-10 cycle is complete and verified, tell the campaign team. Verified participants receive a{' '}
                 <strong className="text-sun">Digital Grassroots Democracy Champion</strong> badge and certificate, and more cycles earn higher recognition.
               </p>
             </div>
-            <div className="rounded-3xl bg-white p-8 ring-1 ring-line">
+            <div className="rounded-md bg-white p-8 ring-1 ring-line">
               <h3 className="text-2xl">Contact the campaign team</h3>
               <ul className="mt-4 space-y-2 text-lg">
                 <li>WhatsApp: <a href={whatsappHref} className="font-semibold text-green-deep underline">{whatsapp}</a></li>
@@ -129,7 +131,7 @@ export default function LocalGovernmentAutonomyPage() {
 
       <section className="py-20 sm:py-28">
         <div className={`${container} grid items-center gap-12 lg:grid-cols-2`}>
-          <div className="overflow-hidden rounded-3xl ring-1 ring-line">
+          <div className="overflow-hidden rounded-md ring-1 ring-line">
             <Image src="/photos/engagement-hall.webp" alt="Participants at a NEFNAI stakeholder engagement" width={2040} height={1530} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
           </div>
           <div>

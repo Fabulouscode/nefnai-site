@@ -28,11 +28,11 @@ export default function VolunteerPage() {
     <>
       <PageHero
         eyebrow="Volunteer"
-        title={<>There is something <span className="text-green-deep">everyone</span> can do.</>}
+        title={<>There is something <span className="hl">everyone</span> can do.</>}
         intro="Fixing Africa is an enormous task that needs every man and woman of goodwill, old or young. Civil servant, business owner, professional or job seeker: there is a role for you."
       >
-        <Button href="#form">Join us now</Button>
-        <Button href="#roles" tone="outline">See the opportunities</Button>
+        <Button href="#form" tone="light">Join us now</Button>
+        <Button href="#roles" tone="ghost-light">See the opportunities</Button>
       </PageHero>
 
       <section className="py-16 sm:py-20">
@@ -54,7 +54,7 @@ export default function VolunteerPage() {
           />
           <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {ROLES.map(([name, text]) => (
-              <li key={name} className="rounded-2xl bg-white p-6 ring-1 ring-line">
+              <li key={name} className="rounded-md bg-white p-6 ring-1 ring-line">
                 <h3 className="text-lg">{name}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">{text}</p>
               </li>

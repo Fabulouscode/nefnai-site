@@ -13,12 +13,13 @@ export function SiteHeader() {
   const open = openOn === pathname;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/80 bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur-md">
+      <div className="tricolor" />
       <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between gap-6 px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="NEFNAI home">
           <Image src="/logo.jpg" alt="" width={44} height={44} className="h-11 w-11 rounded-full" priority />
           <span className="leading-tight">
-            <span className="block font-display text-lg font-extrabold tracking-tight text-ink">NEFNAI</span>
+            <span className="block font-display text-xl font-semibold tracking-tight text-ink">NEFNAI</span>
             <span className="hidden text-[11px] font-semibold text-muted sm:block lg:hidden 2xl:block">New Followership, New Africa Initiative</span>
           </span>
         </Link>
@@ -39,10 +40,10 @@ export function SiteHeader() {
           <Link href="/account/login" className="hidden whitespace-nowrap px-2 text-[15px] font-semibold text-ink/80 hover:text-green-deep xl:inline-flex">
             Sign in
           </Link>
-          <Link href="/volunteer" className="hidden whitespace-nowrap rounded-full px-4 py-2.5 text-[15px] font-bold text-green-deep ring-1 ring-inset ring-green/30 hover:bg-green-soft sm:inline-flex">
+          <Link href="/volunteer" className="hidden whitespace-nowrap rounded-md px-4 py-2.5 text-[15px] font-bold text-green-deep ring-1 ring-inset ring-green/30 hover:bg-green-soft sm:inline-flex">
             Volunteer
           </Link>
-          <Link href="/donate" className="hidden rounded-full bg-sun px-5 py-2.5 text-[15px] font-bold text-forest hover:bg-[#ffc21f] sm:inline-flex">
+          <Link href="/donate" className="hidden rounded-md bg-sun px-5 py-2.5 text-[15px] font-bold text-forest hover:bg-[#ffc21f] sm:inline-flex">
             Donate
           </Link>
           <button
@@ -50,7 +51,7 @@ export function SiteHeader() {
             onClick={() => setOpenOn(open ? null : pathname)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            className="flex h-11 w-11 items-center justify-center rounded-full text-ink ring-1 ring-inset ring-line lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-md text-ink ring-1 ring-inset ring-line lg:hidden"
           >
             <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -75,10 +76,10 @@ export function SiteHeader() {
             Sign in or become a member
           </Link>
           <div className="mt-4 grid grid-cols-2 gap-3">
-            <Link href="/volunteer" className="rounded-full py-3.5 text-center font-bold text-green-deep ring-1 ring-inset ring-green/30">
+            <Link href="/volunteer" className="rounded-md py-3.5 text-center font-bold text-green-deep ring-1 ring-inset ring-green/30">
               Volunteer
             </Link>
-            <Link href="/donate" className="rounded-full bg-sun py-3.5 text-center font-bold text-forest">
+            <Link href="/donate" className="rounded-md bg-sun py-3.5 text-center font-bold text-forest">
               Donate
             </Link>
           </div>

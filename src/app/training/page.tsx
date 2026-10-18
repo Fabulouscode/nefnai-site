@@ -25,16 +25,16 @@ export default function TrainingPage() {
     <>
       <PageHero
         eyebrow="Training & certification"
-        title={<>Skills that change people, and <span className="text-green-deep">communities.</span></>}
+        title={<>Skills that change people, and <span className="hl">communities.</span></>}
         intro="Every NEFNAI training ends with a certificate. Some are for members, others are open to the communities we serve."
       >
-        <Button href="/volunteer">Join NEFNAI</Button>
-        <Button href="/get-help#contact" tone="outline">Ask about a training</Button>
+        <Button href="/volunteer" tone="light">Join NEFNAI</Button>
+        <Button href="/get-help#contact" tone="ghost-light">Ask about a training</Button>
       </PageHero>
 
       <section className="pt-20 sm:pt-24">
         <div className={`${container} grid items-center gap-10 lg:grid-cols-2 lg:gap-16`}>
-          <div className="overflow-hidden rounded-3xl ring-1 ring-line">
+          <div className="overflow-hidden rounded-md ring-1 ring-line">
             <Image src={photos.speaker.src} alt={photos.speaker.alt} width={photos.speaker.width} height={photos.speaker.height} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
           </div>
           <p className="text-lg leading-relaxed sm:text-xl">
@@ -47,7 +47,7 @@ export default function TrainingPage() {
       <section className="py-20 sm:py-28">
         <ul className={`${container} grid gap-5 sm:grid-cols-2 lg:grid-cols-4`}>
           {TRAININGS.map(([name, text], i) => (
-            <li key={name} className="flex flex-col rounded-3xl bg-white p-7 ring-1 ring-line">
+            <li key={name} className="flex flex-col rounded-md bg-white p-7 ring-1 ring-line">
               <span className="font-display text-sm font-extrabold text-sky-deep">{String(i + 1).padStart(2, '0')}</span>
               <h2 className="mt-3 text-xl leading-snug">{name}</h2>
               <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{text}</p>

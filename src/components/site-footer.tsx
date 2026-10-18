@@ -6,12 +6,13 @@ import { nav, site } from '@/lib/site';
 export function SiteFooter() {
   return (
     <footer className="bg-forest text-white/75">
+      <div className="tricolor" />
       <div className={`${container} grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1.2fr]`}>
         <div>
           <div className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="" width={52} height={52} className="h-13 w-13 rounded-full" />
             <div>
-              <p className="font-display text-xl font-extrabold text-white">NEFNAI</p>
+              <p className="font-display text-2xl font-semibold text-white">NEFNAI</p>
               <p className="text-sm">{site.fullName}</p>
             </div>
           </div>

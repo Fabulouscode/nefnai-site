@@ -16,17 +16,26 @@ export function Button({ href, tone = 'green', external = false, children }: { h
     <Link
       href={href}
       {...(external ? { target: '_blank', rel: 'noopener' } : {})}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-bold transition ${TONES[tone]}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-md px-6 py-3.5 text-[15px] font-bold tracking-wide transition ${TONES[tone]}`}
     >
       {children}
     </Link>
   );
 }
 
+/** The rising sun from the logo: a small mark of rays. */
+export function SunMark({ className = 'h-4 w-6' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 14" aria-hidden="true" className={className} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+      <path d="M12 13V3M12 13 5.5 5M12 13l6.5-8M12 13 2 9.5M12 13l10-3.5" />
+    </svg>
+  );
+}
+
 export function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return (
-    <p className={`flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.16em] ${light ? 'text-sky' : 'text-green-deep'}`}>
-      <span aria-hidden="true" className={`h-1.5 w-6 rounded-full ${light ? 'bg-sky' : 'bg-green'}`} />
+    <p className={`flex items-center gap-2.5 text-[12.5px] font-bold uppercase tracking-[0.2em] ${light ? 'text-sky' : 'text-green-deep'}`}>
+      <SunMark className={`h-3.5 w-6 ${light ? 'text-sun' : 'text-sky'}`} />
       {children}
     </p>
   );

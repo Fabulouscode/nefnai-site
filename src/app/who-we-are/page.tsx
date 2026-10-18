@@ -48,7 +48,7 @@ export default function WhoWeArePage() {
     <>
       <PageHero
         eyebrow="Who we are"
-        title={<>A new breed of Africans, for a <span className="text-green-deep">greater Africa.</span></>}
+        title={<>A new breed of Africans, for a <span className="hl">greater Africa.</span></>}
         intro="New Followership, New Africa Initiative (NEFNAI) is a non-governmental organisation founded in 2018 to help rescue African states from system collapse, by reviving integrity and patriotic values in their citizens."
       />
 
@@ -64,7 +64,7 @@ export default function WhoWeArePage() {
               challenges facing their communities and states, and to put Africa on the path of sustainable development.
             </p>
           </div>
-          <div className="overflow-hidden rounded-3xl ring-1 ring-line">
+          <div className="overflow-hidden rounded-md ring-1 ring-line">
             <Image src="/photos/members-audience.webp" alt="NEFNAI members and community members at an engagement" width={2126} height={1594} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
           </div>
         </div>
@@ -72,14 +72,14 @@ export default function WhoWeArePage() {
 
       <section className="bg-mint py-20 sm:py-28">
         <div className={`${container} grid gap-5 md:grid-cols-2`}>
-          <div className="rounded-3xl bg-white p-8 ring-1 ring-line sm:p-10">
+          <div className="rounded-md bg-white p-8 ring-1 ring-line sm:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-green-deep">Our vision</p>
             <p className="mt-4 font-display text-2xl font-bold leading-snug text-ink">
               A new Africa where propriety, discipline and absolute patriotism are the pride of every African, passed on to
               generations yet unborn: an outstanding, shining example for the whole world.
             </p>
           </div>
-          <div className="rounded-3xl bg-forest p-8 sm:p-10">
+          <div className="rounded-md bg-forest p-8 sm:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-sky">Our mission</p>
             <p className="mt-4 font-display text-2xl font-bold leading-snug text-white">
               To bring every African of goodwill on board, through enlightenment programmes, campaigns and advocacy, to make
@@ -94,8 +94,8 @@ export default function WhoWeArePage() {
           <SectionTitle eyebrow="Aims & objectives" title="What we set out to do" />
           <ol className="space-y-4">
             {AIMS.map((aim, i) => (
-              <li key={aim} className="flex gap-5 rounded-2xl bg-white p-6 ring-1 ring-line">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-soft font-display font-extrabold text-green-deep">{i + 1}</span>
+              <li key={aim} className="flex gap-5 rounded-md bg-white p-6 ring-1 ring-line">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-green-soft font-display font-extrabold text-green-deep">{i + 1}</span>
                 <p className="leading-relaxed text-body">{aim}</p>
               </li>
             ))}
@@ -113,7 +113,7 @@ export default function WhoWeArePage() {
           />
           <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map(([name, text]) => (
-              <li key={name} className="rounded-3xl bg-white p-7 ring-1 ring-line">
+              <li key={name} className="rounded-md bg-white p-7 ring-1 ring-line">
                 <span aria-hidden="true" className="block h-1.5 w-10 rounded-full bg-sky" />
                 <h3 className="mt-5 text-lg">{name}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted">{text}</p>
@@ -136,7 +136,7 @@ export default function WhoWeArePage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-3xl bg-forest p-8 text-white sm:p-10">
+          <div className="rounded-md bg-forest p-8 text-white sm:p-10">
             <p className="font-display text-2xl font-bold leading-snug text-white">“Education is the most powerful weapon which you can use to change the world.”</p>
             <p className="mt-3 text-white/60">Nelson Mandela</p>
             <p className="mt-8 leading-relaxed text-white/80">

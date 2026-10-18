@@ -6,8 +6,6 @@ import { site } from '@/lib/site';
 export function AuthShell({ title, intro, children, footer }: { title: string; intro: React.ReactNode; children: React.ReactNode; footer: React.ReactNode }) {
   return (
     <section className="relative overflow-hidden bg-mint">
-      <div aria-hidden="true" className="absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-sky/10 blur-3xl" />
-      <div aria-hidden="true" className="absolute -bottom-52 -left-40 h-[440px] w-[440px] rounded-full bg-green/10 blur-3xl" />
       <div className="relative mx-auto w-full max-w-lg px-5 py-16 sm:py-24">
         <div className="text-center">
           <Image src="/logo.jpg" alt="" width={72} height={72} className="mx-auto h-18 w-18 rounded-full ring-4 ring-white" />

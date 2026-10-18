@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { Fraunces, Public_Sans } from 'next/font/google';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { site } from '@/lib/site';
 import './globals.css';
 
-const body = Inter({ variable: '--font-body', subsets: ['latin'] });
-const heading = Plus_Jakarta_Sans({ variable: '--font-heading', subsets: ['latin'], weight: ['600', '700', '800'] });
+const body = Public_Sans({ variable: '--font-body', subsets: ['latin'] });
+// A warm serif with gravitas for headlines: a movement, not a startup.
+const heading = Fraunces({ variable: '--font-heading', subsets: ['latin'], axes: ['opsz', 'SOFT'] });
 
 export const metadata: Metadata = {
   title: { default: `${site.name}: ${site.fullName}`, template: `%s · ${site.name}` },

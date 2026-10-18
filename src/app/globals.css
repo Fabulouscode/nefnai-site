@@ -45,18 +45,40 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 h1, h2 {
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.06;
+  font-weight: 600;
+  font-variation-settings: 'opsz' 96, 'SOFT' 30;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
 }
 h3 {
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
+  font-weight: 600;
+  font-variation-settings: 'opsz' 36;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 p {
   text-wrap: pretty;
 }
+}
+/* A gold highlighter stroke under key words, like a marked campaign poster. */
+.hl {
+  background: linear-gradient(transparent 62%, rgb(245 179 1 / 0.55) 62%, rgb(245 179 1 / 0.55) 92%, transparent 92%);
+  padding: 0 0.08em;
+  margin: 0 -0.04em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-white .hl {
+  background: var(--color-sun);
+  color: var(--color-forest);
+  padding: 0 0.12em;
+  margin: 0;
+}
+/* The logo's three colours as a thin identity stripe. */
+.tricolor {
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-green) 0 50%, var(--color-sky) 50% 82%, var(--color-sun) 82% 100%);
 }
 ::selection {
   background: var(--color-green);

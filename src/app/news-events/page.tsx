@@ -112,7 +112,7 @@ export default function NewsEventsPage() {
     <>
       <PageHero
         eyebrow="News & events"
-        title={<>What we’re doing, <span className="text-green-deep">and where.</span></>}
+        title={<>What we’re doing, <span className="hl">and where.</span></>}
         intro="The latest from NEFNAI, and the programmes that have run in our communities since 2018."
       />
 
@@ -121,7 +121,7 @@ export default function NewsEventsPage() {
           <SectionTitle eyebrow="Latest" title="News & updates" />
           <ul className="mt-12 grid gap-6 lg:grid-cols-3">
             {NEWS.map((item) => (
-              <li key={item.title} className="flex flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-line">
+              <li key={item.title} className="flex flex-col overflow-hidden rounded-md bg-white ring-1 ring-line">
                 <div className="relative aspect-[16/10] bg-mint">
                   <Image src={item.photo.src} alt={item.photo.alt} fill sizes="(min-width: 1024px) 360px, 100vw" className="object-cover" />
                 </div>
@@ -146,13 +146,13 @@ export default function NewsEventsPage() {
         <div className={container}>
           <SectionTitle
             eyebrow="Programmes & initiatives"
-            title={<>Programmes that are <span className="text-green-deep">making a difference.</span></>}
+            title={<>Programmes that are <span className="hl">making a difference.</span></>}
             intro="From anti-corruption campaigns to getting children back into school, most of our programmes have run every year since NEFNAI began."
           />
         </div>
         <div className={`${container} mt-12 grid gap-6 md:grid-cols-2`}>
           {PROGRAMMES.map((item) => (
-            <article key={item.title} className="flex flex-col rounded-3xl bg-white p-7 ring-1 ring-line sm:p-8">
+            <article key={item.title} className="flex flex-col rounded-md bg-white p-7 ring-1 ring-line sm:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.12em] text-sky-deep">{item.years}</p>
               <h2 className="mt-3 text-2xl leading-tight sm:text-[1.7rem]">{item.title}</h2>
               <p className="mt-3 leading-relaxed text-body">{item.summary}</p>
@@ -192,7 +192,7 @@ export default function NewsEventsPage() {
 
       <section className="bg-forest py-20 text-white sm:py-24">
         <div className={`${container} grid items-center gap-12 lg:grid-cols-2`}>
-          <div className="overflow-hidden rounded-3xl ring-1 ring-white/10">
+          <div className="overflow-hidden rounded-md ring-1 ring-white/10">
             <Image src="/photos/engagement-hall.webp" alt="Participants at a NEFNAI engagement" width={2040} height={1530} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
           </div>
           <div>
