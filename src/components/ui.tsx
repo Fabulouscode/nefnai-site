@@ -11,10 +11,11 @@ const TONES: Record<Tone, string> = {
   'ghost-light': 'text-white ring-1 ring-inset ring-white/30 hover:bg-white/10',
 };
 
-export function Button({ href, tone = 'green', children }: { href: string; tone?: Tone; children: React.ReactNode }) {
+export function Button({ href, tone = 'green', external = false, children }: { href: string; tone?: Tone; external?: boolean; children: React.ReactNode }) {
   return (
     <Link
       href={href}
+      {...(external ? { target: '_blank', rel: 'noopener' } : {})}
       className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-bold transition ${TONES[tone]}`}
     >
       {children}

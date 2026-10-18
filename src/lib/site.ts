@@ -8,6 +8,12 @@ export const site = {
   phones: ['+234 813 851 5294', '+234 703 159 8626'],
   offices: ['8a Ishaya Bakut Road, High Level, Makurdi', '1a Lushakyaa Anja Street, Old G.R.A, Makurdi'],
   state: 'Benue State, Nigeria',
+  campaign: {
+    petitionUrl: 'https://c.org/9xygPdzYk6',
+    surveyUrl: 'https://forms.gle/g6J9puGfmW4eiEY96',
+    whatsapp: '0818 382 3510',
+    whatsappHref: 'https://wa.me/2348183823510',
+  },
 } as const;
 
 export const nav = [

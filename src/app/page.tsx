@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button, Eyebrow, SectionTitle, container } from '@/components/ui';
+import { site } from '@/lib/site';
 
 const STATS = [
   { value: '2018', label: 'Founded in Makurdi, Benue State' },
@@ -173,8 +174,8 @@ export default function Home() {
               Millions of Nigerians are still waiting for it to be implemented. Add your voice.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button href="/local-government-autonomy#petition" tone="sun">Support the petition</Button>
-              <Button href="/local-government-autonomy#survey" tone="ghost-light">Take the quick survey</Button>
+              <Button href={site.campaign.petitionUrl} tone="sun" external>Support the petition</Button>
+              <Button href="/local-government-autonomy" tone="ghost-light">Learn about the campaign</Button>
             </div>
           </div>
           <ul className="grid gap-3">

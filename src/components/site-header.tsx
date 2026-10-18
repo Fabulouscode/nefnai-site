@@ -3,13 +3,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { nav } from '@/lib/site';
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  useEffect(() => setOpen(false), [pathname]);
+  // Open only for the page it was opened on, so navigating closes it.
+  const [openOn, setOpenOn] = useState<string | null>(null);
+  const open = openOn === pathname;
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-white/90 backdrop-blur-md">
@@ -43,7 +44,7 @@ export function SiteHeader() {
           </Link>
           <button
             type="button"
-            onClick={() => setOpen((value) => !value)}
+            onClick={() => setOpenOn(open ? null : pathname)}
             aria-expanded={open}
             aria-controls="mobile-menu"
             className="flex h-11 w-11 items-center justify-center rounded-full text-ink ring-1 ring-inset ring-line lg:hidden"
