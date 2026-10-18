@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { PageHero } from '@/components/page-hero';
-import { Button, container } from '@/components/ui';
+import { Gallery } from '@/components/gallery';
+import { Button, SectionTitle, container } from '@/components/ui';
+import { photos } from '@/lib/photos';
 
 export const metadata: Metadata = {
   title: 'Programmes',
@@ -103,6 +105,25 @@ export default function ProgrammesPage() {
               </ul>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-mint py-20 sm:py-28">
+        <div className={container}>
+          <SectionTitle
+            eyebrow="NEFNAI special welfare scheme"
+            title="Standing with families when it matters most"
+            intro="The scheme helps members give their registered relatives a decent burial, and eases the burden that comes with loss."
+          />
+          <div className="mt-12">
+            <Gallery
+              items={[
+                { photo: photos.welfare1, caption: 'Presenting a welfare scheme benefit to a member’s family.' },
+                { photo: photos.welfare3, caption: 'A family receiving their welfare scheme benefit.' },
+                { photo: photos.welfareFamily, caption: 'Supporting a family in Ushongo LGA.' },
+              ]}
+            />
+          </div>
         </div>
       </section>
 

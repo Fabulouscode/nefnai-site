@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button, Eyebrow, SectionTitle, container } from '@/components/ui';
 import { site } from '@/lib/site';
+import { Gallery } from '@/components/gallery';
+import { photos } from '@/lib/photos';
 
 const STATS = [
   { value: '2018', label: 'Founded in Makurdi, Benue State' },
@@ -223,6 +225,29 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* In the community */}
+      <section className="border-t border-line py-20 sm:py-28">
+        <div className={container}>
+          <SectionTitle
+            eyebrow="In the community"
+            title={<>Our work, <span className="text-sky-deep">on the ground.</span></>}
+            intro="Conferences, outreaches and welfare support in communities across Benue State and beyond."
+          />
+          <div className="mt-12">
+            <Gallery
+              items={[
+                { photo: photos.speaker, caption: 'Addressing participants at a NEFNAI event.' },
+                { photo: photos.presentation, caption: 'NEFNAI members making a presentation to a guest.' },
+                { photo: photos.audience, caption: 'Members and the community at a NEFNAI engagement.' },
+                { photo: photos.registration, caption: 'Signing up participants at an outreach.' },
+                { photo: photos.welfare2, caption: 'A NEFNAI Special Welfare Scheme benefit being presented.' },
+                { photo: photos.welfareFamily, caption: 'A family in Ushongo LGA supported by the welfare scheme.' },
+              ]}
+            />
+          </div>
         </div>
       </section>
 

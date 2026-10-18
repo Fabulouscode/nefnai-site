@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Button, Eyebrow, SectionTitle, container } from '@/components/ui';
 import { site } from '@/lib/site';
+import { photos } from '@/lib/photos';
 
 export const metadata: Metadata = {
   title: 'Local government autonomy',
@@ -93,7 +94,11 @@ export default function LocalGovernmentAutonomyPage() {
       <section className="bg-mint py-20 sm:py-28">
         <div className={container}>
           <SectionTitle center eyebrow="The 10 for 10 challenge" title="How one voice becomes a movement" />
-          <ol className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 lg:grid-cols-[1fr_1.4fr]">
+          <div className="self-start overflow-hidden rounded-3xl ring-1 ring-line">
+            <Image src={photos.tenForTen.src} alt={photos.tenForTen.alt} width={photos.tenForTen.width} height={photos.tenForTen.height} sizes="(min-width: 1024px) 440px, 100vw" className="h-auto w-full" />
+          </div>
+          <ol className="grid gap-5 sm:grid-cols-2">
             {STEPS.map(([name, text], i) => (
               <li key={name} className="rounded-3xl bg-white p-7 ring-1 ring-line">
                 <span className="font-display text-4xl font-extrabold text-sky">{String(i + 1).padStart(2, '0')}</span>
@@ -102,6 +107,7 @@ export default function LocalGovernmentAutonomyPage() {
               </li>
             ))}
           </ol>
+          </div>
           <div className="mt-6 grid gap-5 lg:grid-cols-2">
             <div className="rounded-3xl bg-forest p-8 text-white">
               <h3 className="text-2xl text-white">Get recognised</h3>

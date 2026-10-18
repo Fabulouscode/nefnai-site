@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero } from '@/components/page-hero';
+import { photos } from '@/lib/photos';
 import { Button, container } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -29,6 +31,18 @@ export default function TrainingPage() {
         <Button href="/volunteer">Join NEFNAI</Button>
         <Button href="/get-help#contact" tone="outline">Ask about a training</Button>
       </PageHero>
+
+      <section className="pt-20 sm:pt-24">
+        <div className={`${container} grid items-center gap-10 lg:grid-cols-2 lg:gap-16`}>
+          <div className="overflow-hidden rounded-3xl ring-1 ring-line">
+            <Image src={photos.speaker.src} alt={photos.speaker.alt} width={photos.speaker.width} height={photos.speaker.height} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
+          </div>
+          <p className="text-lg leading-relaxed sm:text-xl">
+            New members are contacted as soon as they sign up, and trained in person at one of our centres or online. Experts
+            and partners join us where a training needs them, as in first aid.
+          </p>
+        </div>
+      </section>
 
       <section className="py-20 sm:py-28">
         <ul className={`${container} grid gap-5 sm:grid-cols-2 lg:grid-cols-4`}>

@@ -65,7 +65,7 @@ export default function WhoWeArePage() {
             </p>
           </div>
           <div className="overflow-hidden rounded-3xl ring-1 ring-line">
-            <Image src="/photos/conference-2024.webp" alt="NEFNAI members at the 2024 Annual General Conference" width={1630} height={1114} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
+            <Image src="/photos/members-audience.webp" alt="NEFNAI members and community members at an engagement" width={2126} height={1594} sizes="(min-width: 1024px) 540px, 100vw" className="h-auto w-full" />
           </div>
         </div>
       </section>
