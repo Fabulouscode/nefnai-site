@@ -12,7 +12,6 @@ const heading = Fraunces({ variable: '--font-heading', subsets: ['latin'], axes:
 export const metadata: Metadata = {
   title: { default: `${site.name}: ${site.fullName}`, template: `%s · ${site.name}` },
   description: site.description,
-  icons: { icon: '/logo.jpg' },
 };
 
 export const viewport: Viewport = { themeColor: '#062b1d' };
