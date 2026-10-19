@@ -15,7 +15,7 @@ const nextConfig: NextConfig = pages
       async redirects() {
         return [
           { source: '/programmes', destination: '/news-events', permanent: true },
-          { source: '/training-certification', destination: '/training', permanent: true },
+          { source: '/training', destination: '/training-certification', permanent: true },
           { source: '/who-we-are/', destination: '/who-we-are', permanent: true },
           { source: '/contact-us', destination: '/get-help#contact', permanent: true },
           { source: '/login', destination: '/account/login', permanent: true },
